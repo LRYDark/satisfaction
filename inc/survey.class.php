@@ -157,7 +157,7 @@ class PluginSatisfactionSurvey extends CommonDBTM {
          'datatype'           => 'date'
       ];
 
-      // ADD catégorie
+      // ADD catégorie ------------------------------------------------------
          $tab[] = [
             'id'                 => '6',
             'table'              => 'glpi_itilcategories',
@@ -166,7 +166,7 @@ class PluginSatisfactionSurvey extends CommonDBTM {
             'massiveaction'      => false,
             'datatype'           => 'dropdown'
          ];
-      // ADD catégorie
+      // ADD catégorie ------------------------------------------------------
 
       $tab[] = [
          'id'                 => '11',
@@ -237,7 +237,7 @@ class PluginSatisfactionSurvey extends CommonDBTM {
                           ]);
       echo "</td></tr>";
 
-      // ADD catégorie
+      // ADD catégorie ------------------------------------------------------
          echo "<tr class='tab_bg_1'>";
          echo "<td>" . __('Catégorie') . "</td>";
          echo "<td>";
@@ -254,7 +254,7 @@ class PluginSatisfactionSurvey extends CommonDBTM {
             'entity_restrict' => 0,
          ]); 
          echo "</td><td colspan='2'></td></tr>";
-      // ADD catégorie
+      // ADD catégorie ------------------------------------------------------
 
       echo "<tr class='tab_bg_1'>";
       echo "<td>" . __('Active') . "</td>";
