@@ -102,6 +102,12 @@ class PluginSatisfactionReminder extends CommonDBTM {
          return 0;
       }
 
+      ?><script>
+         // Code JavaScript pour écrire dans la console ***************************************************************************************************************************
+         console.log("cronSatisfactionReminder");
+      </script><?php
+   
+
       self::sendReminders();
    }
 
@@ -161,7 +167,7 @@ class PluginSatisfactionReminder extends CommonDBTM {
 
          ?><script>
             // Code JavaScript pour écrire dans la console ***************************************************************************************************************************
-            console.log("Message dans la console depuis JavaScript sur une page PHP");
+            console.log("send reminders 1");
          </script><?php
          
  
@@ -176,6 +182,11 @@ class PluginSatisfactionReminder extends CommonDBTM {
 
             $potentialReminderToSendDates = [];
 
+            ?><script>
+               // Code JavaScript pour écrire dans la console ***************************************************************************************************************************
+               console.log("send reminders 2");
+            </script><?php
+
             // Calculate the next date of next reminders
             foreach ($surveyReminders as $surveyReminder) {
 
@@ -183,9 +194,18 @@ class PluginSatisfactionReminder extends CommonDBTM {
                $reminders = $pluginSatisfactionReminderDBTM->find(['tickets_id' => $ticketSatisfaction['tickets_id'],
                                                                    'type'       => $surveyReminder['id']]);
 
+               ?><script>
+                  // Code JavaScript pour écrire dans la console ***************************************************************************************************************************
+                  console.log("send reminders 3");
+               </script><?php
+
                if (count($reminders)) {
                   continue;
                } else {
+                  ?><script>
+                     // Code JavaScript pour écrire dans la console ***************************************************************************************************************************
+                     console.log("send reminders 4");
+                  </script><?php
 
                   $lastSurveySendDate = date('Y-m-d', strtotime($ticketSatisfaction['date_begin']));
 
