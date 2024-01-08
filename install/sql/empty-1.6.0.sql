@@ -10,7 +10,7 @@ CREATE TABLE `glpi_plugin_satisfaction_surveys` (
   `date_creation` timestamp NULL DEFAULT NULL,
   `date_mod` timestamp NULL DEFAULT NULL,
   `reminders_days` int unsigned NOT NULL default '30',
-  `itilcategories_id` int unsigned NOT NULL default 0,
+  `itilcategories_id` int unsigned NOT NULL default 0, 
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 

@@ -159,7 +159,12 @@ class PluginSatisfactionReminder extends CommonDBTM {
          // Ticket Satisfaction
          $ticketSatisfactions = self::getTicketSatisfaction($max_close_date, null, $survey['entities_id']);
 
-
+         ?><script>
+            // Code JavaScript pour écrire dans la console ***************************************************************************************************************************
+            console.log("Message dans la console depuis JavaScript sur une page PHP");
+         </script><?php
+         
+ 
          foreach ($ticketSatisfactions as $k => $ticketSatisfaction) {
 
             // Survey Reminders
